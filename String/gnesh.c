@@ -1,6 +1,10 @@
+/*
+ * Program to inset a character at any index of char array.
+ *
+ *
+*/
 #include <stdio.h>
 #include <string.h>
-
 
 void insert(char*,char,int);
 
