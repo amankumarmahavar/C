@@ -1,8 +1,5 @@
 /*
 *   Program to find out the greatest digit in a number
-*
-*
-*
 */
 
  #include <stdio.h>
@@ -35,9 +32,11 @@
      while(num>0)
      { 
         digit = num%10;
+        
         if(digit>max)
              max = digit;
-        num = num/10;
+        
+         num = num/10;
 
      }
 
