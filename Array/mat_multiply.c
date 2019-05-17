@@ -22,6 +22,11 @@ int main()
          mat1 = (int**) malloc(row * sizeof(int*));
          mat2 = (int**) malloc(row * sizeof(int*));
          matProd = (int**) malloc(row * sizeof(int*));
+        
+        /* These three lines are equivalent to
+        *  int *mat1[3], *mat2[3],*matProd[3];
+        *  Both creates array of 3 integer pointers
+        */
          
          
          for(i=0;i<row;i++)
