@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define row 3
+#define col 3
+
 void readMat(int (*)[3],int (*)[3]);
 void processMat(int (*)[3],int(*)[3],int(*matProd)[3]);
 void displayMat(int(*)[3]);
