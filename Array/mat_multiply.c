@@ -10,7 +10,26 @@ int i,j;
 
 int main()
 {
-         int mat1[3][3],mat2[3][3],matProd[3][3];
+         int *mat1[3],*mat2[3],*matProd[3],i;
+         
+         //Allocating memory dynamically
+         
+         for(i=0;i<3;i++)
+         {
+            mat1[i] = (int*) malloc(3*sizeof(int));
+            mat2[i] = (int*) malloc(3*sizeof(int));
+            matProd[i] = (int*) malloc(3*sizeof(int));
+          
+         }
+         
+         for(i=0;i<3;i++)
+         {
+              if(mat1[i]==NULL || mat2[i]==NULL || matProd[i]==NULL)
+              {
+               printf("Not enough memory\n");
+               exit(1);
+              }
+         }
 
          // the global varibles need not to be passed in the function
          // if you want to pass the variable into function make it local
@@ -19,7 +38,7 @@ int main()
         readMat(mat1,mat2);
 
         processMat(mat1,mat2,matProd);
-    printf("The product of matrices is:\n");
+        printf("The product of matrices is:\n");
         displayMat(matProd);
 
 
